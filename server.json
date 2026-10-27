@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "websiteUrl": "https://systra.tools",
   "repository": {
-    "url": "https://github.com/roesmannamelie-alt/systra-tools-plugin",
+    "url": "https://github.com/systra-tools/systra-tools-plugin",
     "source": "github"
   },
   "remotes": [

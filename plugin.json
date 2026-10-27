@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": { "name": "Systra Studios", "url": "https://systra.tools" },
   "homepage": "https://systra.tools",
-  "repository": "https://github.com/roesmannamelie-alt/systra-tools-plugin",
+  "repository": "https://github.com/systra-tools/systra-tools-plugin",
   "license": "MIT",
   "keywords": ["react", "tailwind", "ui", "components", "design-system", "landing-page"],
   "logo": "logo.png",

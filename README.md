@@ -48,7 +48,7 @@ Click the button above, or add the plugin from
 ### Claude Code
 
 ```
-/plugin marketplace add roesmannamelie-alt/systra-tools-plugin
+/plugin marketplace add systra-tools/systra-tools-plugin
 /plugin install systra-tools@systra
 ```
 
