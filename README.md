@@ -15,11 +15,16 @@
 
 ---
 
-Your AI can code. It just has no taste. This plugin gives it a source of
-finished UI instead of another purple gradient: 37 categories, 18 page
-recipes, and a style extractor that recolours any component to match a real
-brand. Everything is React, TypeScript and Tailwind with no runtime
-dependency, so once a component lands in your project it is your code.
+Systra Tools is a library of 620+ React and Tailwind sections and elements:
+heroes, pricing tables, bento grids, dashboards, footers and more. This
+repository connects it to your coding agent over MCP, so Claude, Cursor or
+VS Code can search the library and drop a section into your project as a
+single TSX file.
+
+Every component imports only react, framer-motion and lucide-react and
+respects reduced motion. Six components can be pulled without a key. A
+Premium key from https://systra.tools/mcp opens the whole library, the
+image library and the page recipes.
 
 ## Install
 
@@ -62,10 +67,10 @@ components, full access needs Premium. Do not commit the key.
 
 | Tool | What it does |
 | --- | --- |
-| `list_categories` | 37 categories with counts |
+| `list_categories` | 25 categories with counts |
 | `list_components`, `search_components` | find a section by intent |
 | `get_component` | the full source |
-| `list_recipes`, `get_recipe` | an ordered page, 18 recipes |
+| `list_recipes`, `get_recipe` | an ordered page, 23 recipes |
 | `list_styles`, `get_style`, `get_component_styled` | the same component in a real brand's colours and fonts |
 | `list_images`, `search_images` | imagery with permanent URLs |
 | `list_posts`, `get_post` | social post templates |
@@ -78,5 +83,8 @@ Largest categories: elements (78), heroes (76), features (38), interaktiv
 A rule, two skills and the MCP configuration. That is all a plugin is. The
 component library itself lives behind the MCP server.
 
-MIT for the configuration in this repository. The library is licensed
-separately, see [systra.tools](https://systra.tools).
+## License
+
+The configuration in this repository is MIT licensed. The components you
+pull through the MCP server are licensed separately, see
+https://systra.tools/terms.
