@@ -67,7 +67,7 @@ Contact Email: die Adresse eintragen, die ihr fuer das Produkt nutzt
 https://mcp.so/submit?type=server, Typ "Remote Server"
 
 Name: Systra Tools
-Repository URL: https://github.com/roesmannamelie-alt/systra-tools-plugin
+Repository URL: https://github.com/systra-tools/systra-tools-plugin
 
 ## 6. Docker MCP Registry
 
