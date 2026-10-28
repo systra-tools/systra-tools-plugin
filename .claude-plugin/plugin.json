@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "author": { "name": "Systra Studios", "url": "https://systra.tools" },
   "homepage": "https://systra.tools",
+  "privacyPolicyUrl": "https://systra.tools/privacy",
   "repository": "https://github.com/systra-tools/systra-tools-plugin",
   "license": "MIT",
+  "icon": "logo.png",
   "keywords": ["react", "tailwind", "ui", "components", "design-system", "landing-page"],
   "userConfig": {
     "SYSTRA_MCP_KEY": {
