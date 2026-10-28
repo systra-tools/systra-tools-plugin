@@ -59,9 +59,10 @@ as `Authorization: Bearer <key>`.
 
 ## Your key
 
-Create one at [systra.tools/mcp](https://systra.tools/mcp) and put it in the
-environment as `SYSTRA_MCP_KEY`. A free account reaches a limited set of
-components, full access needs Premium. Do not commit the key.
+The key is optional. Without one the agent gets the free sample components.
+For the full library, create a Premium key at
+[systra.tools/mcp](https://systra.tools/mcp) and put it in the environment as
+`SYSTRA_MCP_KEY`. Do not commit the key.
 
 ## What the agent gets
 
