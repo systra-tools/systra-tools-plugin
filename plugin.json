@@ -15,9 +15,8 @@
       "SYSTRA_MCP_KEY": {
         "type": "string",
         "title": "Systra MCP key",
-        "description": "Your personal Systra Tools MCP key. Create one at https://systra.tools/mcp"
+        "description": "Optional. Without a key you get the free sample components. For the full library, create a Premium key at https://systra.tools/mcp"
       }
-    },
-    "required": ["SYSTRA_MCP_KEY"]
+    }
   }
 }
