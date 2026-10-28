@@ -1,7 +1,7 @@
 {
   "name": "systra-tools",
   "description": "620+ production-ready React + Tailwind sections and elements your agent can search and pull in over MCP",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": { "name": "Systra Studios", "url": "https://systra.tools" },
   "homepage": "https://systra.tools",
   "privacyPolicyUrl": "https://systra.tools/privacy",
