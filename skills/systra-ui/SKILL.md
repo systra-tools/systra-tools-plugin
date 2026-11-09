@@ -5,8 +5,8 @@ description: Build a page or section from Systra Tools' React + Tailwind library
 
 # Systra UI
 
-The Systra MCP server holds 620+ finished React + Tailwind sections and
-elements across 37 categories, plus 18 page recipes and a style extractor
+The Systra MCP server provides a growing library of finished React + Tailwind
+sections and elements, page recipes, and a style extractor
 that recolours any component to match a real brand.
 
 ## When to reach for it
@@ -46,3 +46,16 @@ grey boxes so the first preview looks like a real page.
 The server needs a personal key in the `Authorization` header. If tool calls
 come back unauthorised, point the user at https://systra.tools/mcp and use
 the `setup` skill.
+
+## Design judgment is a separate skill
+
+This skill is for sourcing and using **actual** components. For design
+direction, evidence-backed critique or multiple visually distinct repair
+options, users can install the free [Systra Taste skills](https://github.com/systra-tools/systra-taste):
+
+```bash
+npx skills@latest add systra-tools/systra-taste
+```
+
+Taste instructions don't replace MCP access or licensing; MCP is optional
+for Taste, and Taste is optional for this component-sourcing skill.
