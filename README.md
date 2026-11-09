@@ -5,7 +5,7 @@
 <h1 align="center">Systra Tools</h1>
 
 <p align="center">
-  620+ production-ready React + Tailwind sections and elements,<br>
+  A growing collection of production-ready React + Tailwind sections and elements,<br>
   searchable by your coding agent over MCP.
 </p>
 
@@ -15,15 +15,14 @@
 
 ---
 
-Systra Tools is a library of 620+ React and Tailwind sections and elements:
+Systra Tools is a growing library of React and Tailwind sections and elements:
 heroes, pricing tables, bento grids, dashboards, footers and more. This
 repository connects it to your coding agent over MCP, so Claude, Cursor or
 VS Code can search the library and drop a section into your project as a
 single TSX file.
 
 Every component imports only react, framer-motion and lucide-react and
-respects reduced motion. Six components can be pulled without a key. A
-Premium key from https://systra.tools/mcp opens the whole library, the
+respects reduced motion. Free components are available without a key. A Premium key from https://systra.tools/mcp opens the whole library, the
 image library and the page recipes.
 
 ## Install
@@ -57,6 +56,21 @@ Click the button above, or add the plugin from
 Point an HTTP MCP server at `https://systra.tools/api/mcp` and send your key
 as `Authorization: Bearer <key>`.
 
+## Improve the design, not just the code
+
+The MCP server gives your coding agent real UI components. The separate, free
+[Systra Taste skills](https://github.com/systra-tools/systra-taste) help it
+decide **which** composition works, review generic layouts, and preview distinct
+redesigns before replacing an existing interface.
+
+```bash
+npx skills@latest add systra-tools/systra-taste
+```
+
+Use `systra-taste` to build, `systra-taste-review` to critique, and
+`systra-taste-repair` to redesign. They work without a key; this MCP integration
+is optional.
+
 ## Your key
 
 The key is optional. Without one the agent gets the free sample components.
@@ -68,16 +82,13 @@ For the full library, create a Premium key at
 
 | Tool | What it does |
 | --- | --- |
-| `list_categories` | 25 categories with counts |
+| `list_categories` | categories with counts |
 | `list_components`, `search_components` | find a section by intent |
 | `get_component` | the full source |
-| `list_recipes`, `get_recipe` | an ordered page, 23 recipes |
+| `list_recipes`, `get_recipe` | an ordered page recipe |
 | `list_styles`, `get_style`, `get_component_styled` | the same component in a real brand's colours and fonts |
 | `list_images`, `search_images` | imagery with permanent URLs |
 | `list_posts`, `get_post` | social post templates |
-
-Largest categories: elements (78), heroes (76), features (38), interaktiv
-(29), gallery (25), gsap (22), stats (22), trust (19), dashboard (18).
 
 ## What is in this repository
 
