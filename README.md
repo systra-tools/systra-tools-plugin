@@ -57,8 +57,9 @@ Click the button above, or add the plugin from
 
 ### VS Code, Windsurf and anything else that speaks MCP
 
-Point an HTTP MCP server at `https://systra.tools/api/mcp` and send your key
-as `Authorization: Bearer <key>`.
+Point an HTTP MCP server at `https://systra.tools/api/mcp`. That alone works
+for the free components; with a Premium key, send it as
+`Authorization: Bearer <key>`.
 
 ## Improve the design, not just the code
 
@@ -93,6 +94,11 @@ For the full library, create a Premium key at
 | `list_styles`, `get_style`, `get_component_styled` | the same component in a real brand's colours and fonts |
 | `list_images`, `search_images` | imagery with permanent URLs |
 | `list_posts`, `get_post` | social post templates |
+
+Prompts: `build_landing_page`, `find_section` and `restyle_component` run the
+usual workflows as a single command. Resources: `systra://catalog/categories`
+and `systra://catalog/recipes` list the catalog without a tool call. Both work
+without a key.
 
 ## What is in this repository
 

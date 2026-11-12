@@ -3,7 +3,7 @@
   "name": "tools.systra/systra-tools",
   "title": "Systra Tools",
   "description": "Search and pull production-ready React + Tailwind sections and elements from a growing library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://systra.tools",
   "repository": {
     "url": "https://github.com/systra-tools/systra-tools-plugin",
@@ -16,14 +16,14 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer token. Create a key at https://systra.tools/mcp",
-          "isRequired": true,
+          "description": "Optional. Without a key the free components work. For the full library, create a Premium key at https://systra.tools/mcp",
+          "isRequired": false,
           "isSecret": true,
           "value": "Bearer {systra_mcp_key}",
           "variables": {
             "systra_mcp_key": {
               "description": "Your personal Systra Tools MCP key",
-              "isRequired": true,
+              "isRequired": false,
               "isSecret": true
             }
           }
