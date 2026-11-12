@@ -13,6 +13,10 @@
   <a href="cursor://anysphere.cursor-deeplink/mcp/install?name=systra-tools&config=eyJ1cmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyICR7ZW52OlNZU1RSQV9NQ1BfS0VZfSJ9fQ=="><img src="https://cursor.com/deeplink/mcp-install-dark.png" alt="Add systra-tools to Cursor" height="32"></a>
 </p>
 
+<p align="center">
+  <a href="https://lobehub.com/mcp/roesmannamelie-alt-systra-tools-plugin"><img src="https://lobehub.com/badge/mcp/roesmannamelie-alt-systra-tools-plugin" alt="MCP Badge"></a>
+</p>
+
 ---
 
 Systra Tools is a growing library of React and Tailwind sections and elements:
