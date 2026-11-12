@@ -1,21 +1,10 @@
-<p align="center">
-  <img src="logo.png" width="88" alt="Systra Tools">
-</p>
+# Systra Tools
 
-<h1 align="center">Systra Tools</h1>
+A growing collection of production-ready React + Tailwind sections and
+elements, searchable by your coding agent over MCP.
 
-<p align="center">
-  A growing collection of production-ready React + Tailwind sections and elements,<br>
-  searchable by your coding agent over MCP.
-</p>
-
-<p align="center">
-  <a href="cursor://anysphere.cursor-deeplink/mcp/install?name=systra-tools&config=eyJ1cmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyICR7ZW52OlNZU1RSQV9NQ1BfS0VZfSJ9fQ=="><img src="https://cursor.com/deeplink/mcp-install-dark.png" alt="Add systra-tools to Cursor" height="32"></a>
-</p>
-
-<p align="center">
-  <a href="https://lobehub.com/mcp/roesmannamelie-alt-systra-tools-plugin"><img src="https://lobehub.com/badge/mcp/roesmannamelie-alt-systra-tools-plugin" alt="MCP Badge"></a>
-</p>
+[![Add systra-tools to Cursor](https://cursor.com/deeplink/mcp-install-dark.png)](cursor://anysphere.cursor-deeplink/mcp/install?name=systra-tools&config=eyJ1cmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyICR7ZW52OlNZU1RSQV9NQ1BfS0VZfSJ9fQ==)
+[![MCP Badge](https://lobehub.com/badge/mcp/systra-tools-systra-tools-plugin)](https://lobehub.com/mcp/systra-tools-systra-tools-plugin)
 
 ---
 
