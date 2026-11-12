@@ -1,0 +1,418 @@
+{
+  "identifier": "roesmannamelie-alt-systra-tools-plugin",
+  "name": "Systra Tools",
+  "version": "1.1.0",
+  "author": "Systra Studios",
+  "authorUrl": "https://systra.tools",
+  "category": "developer",
+  "cloudEndpoint": "https://systra.tools/api/mcp",
+  "description": "Production-ready React and Tailwind sections, templates and UI elements that your coding agent can search and add to a project over MCP. Free components work without a key; a Premium key opens the full library.",
+  "homepage": "https://systra.tools",
+  "icon": "https://systra.tools/favicon-512.png",
+  "tags": [
+    "react",
+    "tailwind",
+    "ui-components",
+    "landing-page",
+    "design-system",
+    "framer-motion"
+  ],
+  "tools": [
+    {
+      "name": "list_categories",
+      "description": "Lists every component category of the Systra Tools library with its slug, its title and how many components it holds. Start here when the user names a kind of page part (hero, pricing, footer) instead of a component, then pass the slug to list_components. No parameters, works without a key.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_components",
+      "description": "Lists component names, optionally limited to one category, one line each with the name and the category slug. Use it to browse a category before choosing; use search_components instead when you already have a keyword. Returns names only, no source: fetch the code with get_component. Works without a key; without one, the components whose source is free are marked \"free\".",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Category slug from list_categories, e.g. 'heroes', 'cta', 'pricing', 'forms', 'footer'. Omit it to list every component (more than 600)."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "search_components",
+      "description": "Finds components whose name or category contains the search term (one term, case-insensitive substring match) and returns their names with the category slug. Use it when you know roughly what you need, such as 'pricing', 'marquee', 'testimonial' or 'countdown'; use list_components to see a whole category. Names are English PascalCase, so short English words match best. Follow up with get_component for the source.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "One keyword or name fragment, e.g. 'hero', 'gallery', 'bento'. Matched against component names and category slugs and titles."
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_component",
+      "description": "Returns the complete, copy-ready React/TSX source of one component as designed, plus notes on its images and any extra files it needs. Components use Tailwind CSS classes and import react, framer-motion and lucide-react; a few also need gsap or three, which the response names with the install command. Use it once you know the exact name; use get_component_styled instead when the component should take on an extracted brand style. Without a premium key, source comes back for the free components, the first six of every category, which list_components and search_components mark as \"free\"; other names return a notice on how to get a key.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Component name as listed by list_components or search_components, e.g. 'OrbitGalleryHero'. Matching ignores case."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_styles",
+      "description": "Lists the brand styles extracted from real websites with the Systra style extractor: slug, site name, primary and accent colour and heading font. Pass query to search by site name, domain, colour or font, for example 'bakery' or 'Inter'. Use it to find a slug for get_style, get_component_styled or get_recipe. Works without a key.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search term (optional). Every word must appear in the slug, site name, domain, colours or fonts. Without it, the 30 newest styles are listed."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_style",
+      "description": "Returns every design token of one extracted brand style: colours, font families and sizes, spacing, radii, CSS variables and the generated DESIGN.md (up to 4000 characters). Use it to theme your own code or set up a design system; use get_component_styled when you want one specific component already paired with the style.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Style slug exactly as listed by list_styles."
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_component_styled",
+      "description": "Returns one component's source together with the tokens of a brand style, step-by-step instructions for mapping the component's colours, fonts and radii onto that style, and the colour values the component uses today. Use it instead of get_component when the result should match a specific brand. The server does not rewrite the code; you apply the mapping. Same premium rule as get_component.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Component name as listed by list_components, e.g. 'GradientHeroSection'."
+          },
+          "style": {
+            "type": "string",
+            "description": "Style slug exactly as listed by list_styles."
+          }
+        },
+        "required": [
+          "name",
+          "style"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_images",
+      "description": "Lists images and a few videos from the Systra Tools media library (all AI-generated), each with a permanent URL to use directly as src, plus title, album, format and, where available, a one-sentence description, dominant colours, brightness, where there is room for text and what the image suits. Filter by album, format, tone, text_space, use, color and people, 100 per page. Use it to browse; use search_images to find a motif by words. Without a premium key only the free images are returned, three per album.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "album": {
+            "type": "string",
+            "description": "Album key (optional, German): verlaeufe, abstrakt, surreal, objekte, freisteller, natur, interior, essen, portraet, beauty, hochzeit, menschen, arbeitsplatz, business, industrie, gesundheit, sport, autos, luftfahrt, nachtleben. Without one, every album is returned."
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "landscape",
+              "portrait",
+              "square"
+            ],
+            "description": "Image format to filter by (optional)."
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "light",
+              "mid",
+              "dark"
+            ],
+            "description": "Overall brightness of the image (optional)."
+          },
+          "text_space": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right",
+              "top",
+              "bottom",
+              "center"
+            ],
+            "description": "Where a calm area leaves room for a headline (optional). E.g. 'left' for a hero with the text on the left."
+          },
+          "use": {
+            "type": "string",
+            "enum": [
+              "hero",
+              "background",
+              "card",
+              "portrait",
+              "texture",
+              "product"
+            ],
+            "description": "What the image is good for on a website (optional)."
+          },
+          "color": {
+            "type": "string",
+            "description": "A dominant colour by name, e.g. 'blue', 'sage', 'orange' (optional)."
+          },
+          "people": {
+            "type": "string",
+            "enum": [
+              "none",
+              "one",
+              "several"
+            ],
+            "description": "How many people are visible (optional)."
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Page of the result, 100 images per page (optional, default 1)."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "search_images",
+      "description": "Finds images in the media library (all AI-generated) by what they show: the query is matched against a description of each image written by a vision model, its tags, title, colours and album, and the best matches come first. Returns permanent URLs, 100 per page, each with its description, dominant colours, brightness and where there is room for text, so you can pick the image that fits the layout. Use it for a motif ('red dress', 'laptop on a desk', 'misty forest') and narrow it with tone, text_space, use, color or people, e.g. query 'architecture' with text_space 'left' and tone 'dark' for a hero with white text on the left. Without a premium key only the free images are included.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "One or more English words describing the motif. Images matching every word rank first; if none do, close matches follow. E.g. 'gradient', 'laptop desk', 'woman red dress'."
+          },
+          "tone": {
+            "type": "string",
+            "enum": [
+              "light",
+              "mid",
+              "dark"
+            ],
+            "description": "Overall brightness of the image (optional)."
+          },
+          "text_space": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right",
+              "top",
+              "bottom",
+              "center"
+            ],
+            "description": "Where a calm area leaves room for a headline (optional). E.g. 'left' for a hero with the text on the left."
+          },
+          "use": {
+            "type": "string",
+            "enum": [
+              "hero",
+              "background",
+              "card",
+              "portrait",
+              "texture",
+              "product"
+            ],
+            "description": "What the image is good for on a website (optional)."
+          },
+          "color": {
+            "type": "string",
+            "description": "A dominant colour by name, e.g. 'blue', 'sage', 'orange' (optional)."
+          },
+          "people": {
+            "type": "string",
+            "enum": [
+              "none",
+              "one",
+              "several"
+            ],
+            "description": "How many people are visible (optional)."
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Page of the result, 100 images per page (optional, default 1)."
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_posts",
+      "description": "Lists the Instagram post templates (1080 x 1350) with slug, name, family and whether they need your own imagery. Each template is a single HTML file that can be rebuilt and exported as an image or a video. Pass query to search by name or purpose, for example 'quote' or 'statistic'. Use it to pick a slug for get_post.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search term (optional). Every word must appear in the slug, name, purpose or family. Can be combined with family."
+          },
+          "family": {
+            "type": "string",
+            "enum": [
+              "klar",
+              "editorial"
+            ],
+            "description": "Family to filter by (optional): 'klar' are calm informational posts, 'editorial' lives on the image and a serif face."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_post",
+      "description": "Returns one post template as working instructions: the full HTML file, an export script to render it locally as PNG or video, and the rules on what may be changed. The server renders nothing; you edit and export the file. Use it after list_posts.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Template slug as listed by list_posts."
+          },
+          "lang": {
+            "type": "string",
+            "enum": [
+              "de",
+              "en"
+            ],
+            "description": "Language of the instructions (optional, English by default)."
+          }
+        },
+        "required": [
+          "slug"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_recipes",
+      "description": "Lists curated page recipes: proven section sequences for complete landing pages (for example SaaS, coaching or a hotel), each with its number of sections and a short purpose. Pass query to search by industry, purpose or section, for example 'hotel' or 'pricing'. Use it when the user wants a whole page rather than one section, then call get_recipe.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search term (optional). Every word must appear in the slug, title, description or section names. Without it, every recipe is listed."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_recipe",
+      "description": "Returns one page recipe: the ordered sections with the purpose of each, a composition file where available, and the full source of every section. Pass style to add brand tokens and adaptation instructions. Without a premium key, sections that are not free are named but their source is held back. The answer is long because it contains several complete components.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Recipe slug as listed by list_recipes, e.g. 'saas-produkt' or 'hotel-stay'."
+          },
+          "style": {
+            "type": "string",
+            "description": "Style slug from list_styles (optional), to adapt the page to a brand."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "name": "build_landing_page",
+      "title": "Build a landing page",
+      "description": "Plans and assembles a complete landing page from Systra Tools sections, following a page recipe.",
+      "arguments": [
+        {
+          "name": "topic",
+          "description": "What the page is for, e.g. a physio practice or a SaaS tool.",
+          "required": true
+        },
+        {
+          "name": "style",
+          "description": "Optional look, e.g. calm and editorial, or dark and technical.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "find_section",
+      "title": "Find a section",
+      "description": "Finds the best fitting section or element for a described need and adds its source to the project.",
+      "arguments": [
+        {
+          "name": "need",
+          "description": "What the section should do, e.g. pricing with three plans and a yearly toggle.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "restyle_component",
+      "title": "Restyle a component for a brand",
+      "description": "Returns a Systra Tools component in the colours and fonts of an extracted brand style.",
+      "arguments": [
+        {
+          "name": "component",
+          "description": "Component name, e.g. from list_components or search_components.",
+          "required": true
+        },
+        {
+          "name": "brand",
+          "description": "Brand or style name to match; leave empty to choose from list_styles.",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "uri": "systra://catalog/categories",
+      "name": "categories",
+      "title": "Component categories",
+      "description": "Every category of the library with its slug and how many components it holds.",
+      "mimeType": "text/plain"
+    },
+    {
+      "uri": "systra://catalog/recipes",
+      "name": "recipes",
+      "title": "Page recipes",
+      "description": "Ordered section sequences for complete pages, to use with get_recipe.",
+      "mimeType": "text/plain"
+    }
+  ]
+}
