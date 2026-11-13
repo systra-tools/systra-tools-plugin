@@ -1,0 +1,12 @@
+{
+  "name": "systra-tools-plugin",
+  "version": "1.0.0",
+  "description": "Search and use Systra Tools React and Tailwind UI sections, elements, design styles and page recipes from Gemini CLI through MCP.",
+  "mcpServers": {
+    "systra": {
+      "httpUrl": "https://systra.tools/api/mcp",
+      "timeout": 30000,
+      "description": "Systra Tools remote MCP. Free UI components work without an API key; Premium is optional."
+    }
+  }
+}
