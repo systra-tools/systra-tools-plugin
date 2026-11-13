@@ -1,0 +1,21 @@
+{
+  "name": "systra-tools",
+  "displayName": "Systra Tools",
+  "version": "1.0.2",
+  "description": "Give your coding agent a growing library of production-ready React and Tailwind UI components through MCP.",
+  "author": {
+    "name": "Systra Studios",
+    "email": "info@systrastudios.de"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "mcp",
+    "react",
+    "tailwind",
+    "ui-components",
+    "web-design",
+    "coding-agents"
+  ],
+  "logo": "logo.png"
+}
