@@ -3,7 +3,7 @@
 A growing collection of production-ready React + Tailwind sections and
 elements, searchable by your coding agent over MCP.
 
-[![Add systra-tools to Cursor](https://cursor.com/deeplink/mcp-install-dark.png)](cursor://anysphere.cursor-deeplink/mcp/install?name=systra-tools&config=eyJ1cmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyICR7ZW52OlNZU1RSQV9NQ1BfS0VZfSJ9fQ==)
+[![Add systra-tools to Cursor](https://cursor.com/deeplink/mcp-install-dark.png)](cursor://anysphere.cursor-deeplink/mcp/install?name=systra-tools&config=eyJ1cmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIn0=)
 [![Add to Replit](https://replit.com/badge?caption=Add%20to%20Replit)](https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IlN5c3RyYSBUb29scyIsImJhc2VVcmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIn0=)
 [![MCP Badge](https://lobehub.com/badge/mcp/systra-tools-systra-tools-plugin)](https://lobehub.com/mcp/systra-tools-systra-tools-plugin)
 
@@ -21,7 +21,7 @@ respects reduced motion.
 The first six components in each category are free without an account or key.
 Premium unlocks the complete source library and additional media. In Claude,
 Premium can use your Systra account sign-in; in coding editors you can use a
-personal MCP key from https://systra.tools/mcp.
+personal MCP key from https://systra.tools/mcp?utm_source=github_repository&utm_medium=referral&utm_campaign=mcp_directory.
 
 ## Install
 
@@ -35,12 +35,14 @@ Click the button above, or add the plugin from
 {
   "mcpServers": {
     "systra-tools": {
-      "url": "https://systra.tools/api/mcp",
-      "headers": { "Authorization": "Bearer ${env:SYSTRA_MCP_KEY}" }
+      "url": "https://systra.tools/api/mcp"
     }
   }
 }
 ```
+
+For optional Premium access, add `"headers": { "Authorization": "Bearer YOUR_MCP_KEY" }`
+to this server entry. No key is required to start free.
 
 ### Claude Code
 
@@ -100,7 +102,7 @@ is optional.
 The key is optional. Without one, the agent can browse the full catalog and
 retrieve source for the first six components of each category. To unlock the
 full library in coding editors, create a Premium key at
-[systra.tools/mcp](https://systra.tools/mcp) and set `SYSTRA_MCP_KEY`.
+[systra.tools/mcp](https://systra.tools/mcp?utm_source=github_repository&utm_medium=referral&utm_campaign=mcp_directory) and set `SYSTRA_MCP_KEY`.
 Never commit your key. In Claude's connector you can sign in to your Systra
 account instead.
 
