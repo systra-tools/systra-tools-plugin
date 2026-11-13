@@ -4,6 +4,7 @@ A growing collection of production-ready React + Tailwind sections and
 elements, searchable by your coding agent over MCP.
 
 [![Add systra-tools to Cursor](https://cursor.com/deeplink/mcp-install-dark.png)](cursor://anysphere.cursor-deeplink/mcp/install?name=systra-tools&config=eyJ1cmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyICR7ZW52OlNZU1RSQV9NQ1BfS0VZfSJ9fQ==)
+[![Add to Replit](https://replit.com/badge?caption=Add%20to%20Replit)](https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IlN5c3RyYSBUb29scyIsImJhc2VVcmwiOiJodHRwczovL3N5c3RyYS50b29scy9hcGkvbWNwIn0=)
 [![MCP Badge](https://lobehub.com/badge/mcp/systra-tools-systra-tools-plugin)](https://lobehub.com/mcp/systra-tools-systra-tools-plugin)
 
 ---
@@ -47,6 +48,17 @@ Click the button above, or add the plugin from
 /plugin marketplace add systra-tools/systra-tools-plugin
 /plugin install systra-tools@systra
 ```
+
+### Lovable, Bolt, v0 and Replit
+
+- **Lovable:** Connectors, then the Custom MCP card at the bottom. Paste
+  `https://systra.tools/api/mcp` and click Add server.
+- **Bolt:** Connectors (MCP), then Custom MCP server. Transport HTTP,
+  authentication None, or API key for Premium.
+- **v0:** Add MCP under MCP Connections or in the prompt field. No Auth, or
+  Bearer Token with your Premium key.
+- **Replit:** click the Add to Replit button above, or Integrations, MCP, Add
+  MCP server with the same address.
 
 ### VS Code, Windsurf and anything else that speaks MCP
 
