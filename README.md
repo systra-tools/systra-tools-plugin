@@ -133,3 +133,18 @@ component library itself lives behind the MCP server.
 The configuration in this repository is MIT licensed. The components you
 pull through the MCP server are licensed separately, see
 https://systra.tools/terms.
+
+### Gemini CLI
+
+Install the Systra Tools extension directly from the official repository:
+
+```bash
+gemini extensions install https://github.com/systra-tools/systra-tools-plugin
+```
+
+The extension connects to `https://systra.tools/api/mcp` using Streamable HTTP.
+**Free components need no account or API key.** Premium access is optional.
+
+Try: "Use Systra Tools to find a responsive SaaS pricing section, retrieve its React and Tailwind source, and adapt it to this project."
+
+Learn more at [Systra Tools MCP](https://systra.tools/mcp?utm_source=gemini_cli&utm_medium=referral&utm_campaign=mcp_directory).
