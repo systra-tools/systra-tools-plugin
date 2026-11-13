@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "systra-tools",
-  "description": "production-ready React + Tailwind sections and elements from a growing library your agent can search and pull in over MCP",
+  "description": "Give your coding agent real React + Tailwind UI via MCP. Search a growing library, build pages and start with six free components per category.",
   "version": "1.0.2",
   "author": { "name": "Systra Studios", "url": "https://systra.tools" },
   "homepage": "https://systra.tools",
@@ -15,7 +15,7 @@
       "SYSTRA_MCP_KEY": {
         "type": "string",
         "title": "Systra MCP key",
-        "description": "Optional. Without a key you get the free sample components. For the full library, create a Premium key at https://systra.tools/mcp"
+        "description": "Optional. Without a key you can browse the full catalog and use the first six components in each category. For Premium source, create a personal key at https://systra.tools/mcp"
       }
     }
   }

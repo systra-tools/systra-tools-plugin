@@ -15,8 +15,12 @@ VS Code can search the library and drop a section into your project as a
 single TSX file.
 
 Every component imports only react, framer-motion and lucide-react and
-respects reduced motion. Free components are available without a key. A Premium key from https://systra.tools/mcp opens the whole library, the
-image library and the page recipes.
+respects reduced motion.
+
+The first six components in each category are free without an account or key.
+Premium unlocks the complete source library and additional media. In Claude,
+Premium can use your Systra account sign-in; in coding editors you can use a
+personal MCP key from https://systra.tools/mcp.
 
 ## Install
 
@@ -50,6 +54,20 @@ Point an HTTP MCP server at `https://systra.tools/api/mcp`. That alone works
 for the free components; with a Premium key, send it as
 `Authorization: Bearer <key>`.
 
+## Your first result with Systra Tools
+
+Once connected, paste this directly into Claude Code or another MCP-enabled
+coding agent with access to your React project:
+
+> Build a modern SaaS landing page in my React project using free Systra Tools sections. Find a hero, features, pricing and CTA with the Systra Tools MCP tools. Fetch the real TSX source, integrate it with Tailwind, and make the page responsive. If a section needs Premium, show a free alternative.
+
+For a smaller first step:
+
+> Find a free Systra Tools hero section, explain the design and add its TSX source to my React project.
+
+In Claude web chat without local file access, Claude can find and display
+components, but cannot directly edit the files on your computer.
+
 ## Improve the design, not just the code
 
 The MCP server gives your coding agent real UI components. The separate, free
@@ -67,10 +85,12 @@ is optional.
 
 ## Your key
 
-The key is optional. Without one the agent gets the free sample components.
-For the full library, create a Premium key at
-[systra.tools/mcp](https://systra.tools/mcp) and put it in the environment as
-`SYSTRA_MCP_KEY`. Do not commit the key.
+The key is optional. Without one, the agent can browse the full catalog and
+retrieve source for the first six components of each category. To unlock the
+full library in coding editors, create a Premium key at
+[systra.tools/mcp](https://systra.tools/mcp) and set `SYSTRA_MCP_KEY`.
+Never commit your key. In Claude's connector you can sign in to your Systra
+account instead.
 
 ## What the agent gets
 
