@@ -317,7 +317,7 @@
     },
     {
       "name": "list_recipes",
-      "description": "Lists curated page recipes: proven section sequences for complete landing pages (for example SaaS, coaching or a hotel), each with its number of sections and a short purpose. Pass query to search by industry, purpose or section, for example 'hotel' or 'pricing'. Use it when the user wants a whole page rather than one section, then call get_recipe.",
+      "description": "Lists curated page recipes: proven section sequences for complete landing pages (for example an agency, coaching or a hotel), each with its number of sections and a short purpose. Pass query to search by industry, purpose or section, for example 'hotel' or 'pricing'. Use it when the user wants a whole page rather than one section, then call get_recipe.",
       "inputSchema": {
         "type": "object",
         "properties": {
